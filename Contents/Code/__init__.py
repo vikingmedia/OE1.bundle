@@ -53,7 +53,7 @@ def Live(title):
     return oc
 
 
-@route(PREFIX + '/catchup')
+@route(PREFIX + '/catchup', allow_sync=True)
 def Catchup(title):    
     Log('Catchup()')
     oc = ObjectContainer(title2=title)
@@ -70,7 +70,7 @@ def Catchup(title):
     
     return oc
 
-@route(PREFIX + '/catchup/day')
+@route(PREFIX + '/catchup/day', allow_sync=True)
 def Day(title, url):
     Log('Day(%s, %s)', title, url)
     oc = ObjectContainer(title2=title)
@@ -114,7 +114,7 @@ def PlayAudio(url):
 
 
 
-@route(PREFIX + '/journale')
+@route(PREFIX + '/journale', allow_sync=True)
 def Journale(title):
     Log('Journale()')
     oc = ObjectContainer(title2=title)
